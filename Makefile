@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jpopa-po <jpopa-po@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/05/26 11:58:16 by cmarcu            #+#    #+#              #
-#    Updated: 2022/04/24 14:35:22 by jpopa-po         ###   ########.fr        #
+#    Created: 2022/05/09 13:39:48 by jpopa-po          #+#    #+#              #
+#    Updated: 2022/07/05 20:30:47 by jpopa-po         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 NAME = push_swap
 
 LIBFTPATH	= libft/
-CC = gcc
+CC = cc
 CFLAGS = -Werror -Wextra -Wall -g3 -fsanitize=address
 RM = rm -f
 
@@ -54,11 +54,11 @@ check_bonus: $(NAME) bonus
 	./push_swap $(ARG) | ./checker $(ARG)
 
 clean:
-		$(RM) $(OBJS) $(OBJS_BONUS)
+		$(RM) $(OBJS) $(OBJS_BONUS) libft.a
 
 fclean: clean
 		make -sC ${LIBFTPATH} fclean
-		${RM} ${NAME}
+		${RM} ${NAME} libft.a
 
 re: fclean all
 

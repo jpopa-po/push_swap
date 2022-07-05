@@ -5,19 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpopa-po <jpopa-po@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/26 12:02:39 by cmarcu            #+#    #+#             */
-/*   Updated: 2022/04/24 14:26:25 by jpopa-po         ###   ########.fr       */
+/*   Created: 2022/05/07 16:39:34 by jpopa-po          #+#    #+#             */
+/*   Updated: 2022/05/11 19:48:48 by jpopa-po         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <unistd.h> // Null
-# include <fcntl.h> // File control: open, read, close
-# include <stdlib.h> // Malloc, free
-# include <stdio.h> // Printf, scanf
-# include <limits.h> // Int min and max values
+# include <unistd.h>
+# include <fcntl.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <limits.h>
 # include "../libft/libft.h"
 
 typedef struct s_swap
@@ -78,5 +78,5 @@ void	f(int n);
 void	print_rule(char *rule);
 void	do_rule(t_swap *swap, char *rule);
 int		do_swap(t_swap *swap, char *rule);
-
+int		ft_atoi_tunned(const char *nptr);
 #endif

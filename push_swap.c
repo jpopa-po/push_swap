@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpopa-po <jpopa-po@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/26 12:02:00 by cmarcu            #+#    #+#             */
-/*   Updated: 2022/04/24 14:44:35 by jpopa-po         ###   ########.fr       */
+/*   Created: 2022/05/07 16:39:03 by jpopa-po          #+#    #+#             */
+/*   Updated: 2022/07/05 20:31:04 by jpopa-po         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	push_swap_fill(int argc, char **argv, t_swap *swap)
 		while (temp[i])
 		{
 			check_for_letters(i, temp);
-			num = ft_atoi(temp[i]);
+			num = ft_atoi_tunned(temp[i]);
 			swap->repeated = num;
 			check_repeated(swap, swap->stack_a);
 			ft_lstadd_back(&swap->stack_a, ft_lstnew(num));
@@ -112,12 +112,14 @@ void	chunk_algorithm(t_swap *swap)
 
 int	main(int argc, char **argv)
 {
-	t_swap	push_swap;
+	t_swap	ps;
 
 	if (argc < 2)
 		return (0);
-	push_swap_fill(argc, argv, &push_swap);
-	if (check_sorted(push_swap.stack_a))
+	push_swap_fill(argc, argv, &ps);
+	if (check_sorted(ps.stack_a))
 		exit(1);
-	push_swap_sorter(&push_swap);
+	push_swap_sorter(&ps);
+	ft_lstclear(&ps.stack_a);
+	ft_lstclear(&ps.stack_b);
 }

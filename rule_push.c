@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpopa-po <jpopa-po@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/09 17:15:55 by cmarcu            #+#    #+#             */
-/*   Updated: 2022/04/24 14:44:42 by jpopa-po         ###   ########.fr       */
+/*   Created: 2022/05/07 16:38:57 by jpopa-po          #+#    #+#             */
+/*   Updated: 2022/05/16 13:39:13 by jpopa-po         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
 
-// pa | pb | pp -> Toma el primer elemento en la parte superior de a ó b
-// y ponerlo en la parte superior de a ó b. No hace nada si a ó b está vacío.
+// pa | pb | pp -> takes first element of a or b
+//and puts it in the top of a or b. If a or b is empty, it does nothing.
 
 int	pb(t_swap **head)
 {

@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpopa-po <jpopa-po@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/09 16:33:46 by cmarcu            #+#    #+#             */
-/*   Updated: 2022/04/24 14:44:53 by jpopa-po         ###   ########.fr       */
+/*   Created: 2022/05/07 16:38:43 by jpopa-po          #+#    #+#             */
+/*   Updated: 2022/05/16 13:39:18 by jpopa-po         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/push_swap.h"
 
-// sa | sb | ss -> Intercambiar los primeros 2 elementos en la parte
-// superior de la pila x. No hace nada si sólo hay uno o ningún elementos.
+// sa | sb | ss -> swapping the first 2 elements
+// top of each stack, id does nothing if is only 1 or 0 elements
 
 int	swap_rule(t_swap *swap, t_list *stack)
 {
